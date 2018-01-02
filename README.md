@@ -1,5 +1,7 @@
 # Vim <-> Evince forward and backward search for vim-latexsuite and VimTex
 
+* Only works on GVIM at the moment.
+
 # Installation
 
 Should work with standard plugin managers.
