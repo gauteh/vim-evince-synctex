@@ -18,6 +18,7 @@ let g:vimtex_view_general_viewer  = s:path . '/../../bin/evince_backward.sh '
 let g:vimtex_view_general_options = '@pdf ' . v:servername
 
 function! Evince_ForwardSearch()
+  VimtexView
   let cmd = s:path . '/../../bin/evince_dbus.py ' . b:vimtex.out() . ' ' . line(".") . ' ' . expand("%:p")
   let output = system(cmd)
 endfunction
