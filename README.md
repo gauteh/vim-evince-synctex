@@ -1,27 +1,34 @@
-# Vim <-> Evince forward and backward search for vim-latexsuite and VimTex
+# Vim <-> Evince forward and backward search for vim-LaTeXSuite and VimTeX
 
-* Only works on GVIM at the moment.
+This plugin provides backwards and forward search between GVIM and [Evince](https://wiki.gnome.org/Apps/Evince).
+
+> Only works on GVIM at the moment.
 
 # Installation
 
 Should work with standard plugin managers.
 
+## Requirements
+
+* Evince
+* Python 3
+* Python 2
+
 # Usage
 
-## LatexSuite
+## [LatexSuite](https://github.com/vim-latex/vim-latex)
 
 ```vim
-" recognize all .tex files as latex
-let g:tex_flavor = "latex"
 
 " compile your pdf with --synctex support:
 let g:Tex_CompileRule_pdf =
       \ 'pdflatex --synctex=1 -interaction=nonstopmode -shell-escape "$*"'
+
 ```
 
 Use `\ls` to forward search, use `Ctrl+Left Mouse` to backward search.
 
-## VimTex
+## [VimTex](https://github.com/lervag/vimtex)
 
 ```vim
 
