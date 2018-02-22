@@ -14,7 +14,7 @@ function! Tex_ForwardSearchLaTeX()
 endfunction
 
 " VimTex
-let g:vimtex_view_general_viewer  = s:path . '/../../bin/evince_backward.sh '
+let g:vimtex_view_general_viewer  = resolve(s:path . '/../../bin/evince_backward.sh')
 let g:vimtex_view_general_options = '@pdf ' . v:servername
 
 function! Evince_ForwardSearch()
