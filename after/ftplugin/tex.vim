@@ -2,7 +2,7 @@ let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 " LatexSuite
 function! Tex_ViewLaTeX()
-  let cmd = s:path . '/../../bin/evince_backward.sh ' . fnamemodify(Tex_GetMainFileName(), ":p:r") . '.pdf ' . v:servername . ' &'
+  let cmd = s:path . '/../../bin/evince_backward.sh "' . fnamemodify(Tex_GetMainFileName(), ":p:r") . '.pdf" ' . v:servername . ' &'
   " let cmd = 'evince ' . fnamemodify(Tex_GetMainFileName(), ":p:r") . '.pdf &'
   let output = system(cmd)
 endfunction
