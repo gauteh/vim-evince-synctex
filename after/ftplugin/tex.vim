@@ -1,7 +1,4 @@
-silent !which evince
-redraw!
-
-if v:shell_error == 0
+if executable('evince')
 
     let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
     " LatexSuite
